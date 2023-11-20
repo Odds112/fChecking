@@ -4,10 +4,10 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from sentence_transformers import SentenceTransformer, util
 # from serpapi import GoogleSearch
-import spacy
+# import spacy
 from llamaapi import LlamaAPI
 # import neuralcoref
-from spacy import displacy
+# from spacy import displacy
 # from allennlp.predictors.predictor import Predictor
 # import allennlp_models.tagging
 
@@ -15,7 +15,7 @@ from spacy import displacy
 # SRL_MODEL_PATH = "https://storage.googleapis.com/allennlp-public-models/structured-prediction-srl-bert.2020.12.15.tar.gz"
 
 
-nltk.download('punkt')
+# nltk.download('punkt')
 
 
 # intros = set(["Accordingly",
@@ -208,7 +208,7 @@ def get_relevant_refs(refs, source):
 
     all_sentences = []
     for j in refs:
-        sentences = sent_tokenize(j)
+        sentences = sent_tokenize(j['snippet'])
         all_sentences += sentences
 
     scores = []
