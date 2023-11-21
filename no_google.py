@@ -6,7 +6,6 @@ from sentence_transformers import SentenceTransformer, util
 
 
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-nltk.download('punkt')
 
 def get_relevant_refs(refs, source):
 
