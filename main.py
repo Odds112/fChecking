@@ -82,6 +82,12 @@ option = st.selectbox(
     'Выберите то, о чем вы хотите узнать: ', va)
 
 if st.button('Start'):
+    i = 0
     ready_sen = no_google.run_no_google(start_option(option))
-    for x in ready_sen:
-        st.write(x)
+    for y in ready_sen:
+        i=+1
+        if i!=2:
+            for x in y:
+                st.write(x)
+        else:
+            st.write(y)
