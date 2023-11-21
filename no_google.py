@@ -49,10 +49,10 @@ def run_no_google(google_outputs):
     reliable_sentences = []
     for sentence in google_outputs:
         relevant_google_outputs = get_relevant_refs(sentence['google'], sentence['querry'])
-        if relevant_google_outputs == None:
-           new_sen1 = (sentence['querry'] + "  --> " +"Suspicious sentence. It is either meaningless or completely false")
-           reliable_sentences.append(new_sen1)
-           continue
+        #if relevant_google_outputs == None:
+          # new_sen1 = (sentence['querry'] + "  --> " +"Suspicious sentence. It is either meaningless or completely false")
+          # reliable_sentences.append(new_sen1)
+          # continue
 
         # prompt = f'''Source: "{sentence['querry']}" '''
         # for i, fact in enumerate(relevant_google_outputs):
